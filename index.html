@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preload"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"
+        as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css">
+    </noscript>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabella Accessibile Vapor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <table>
+        <caption class="visually-hidden"> Elenco utenti </caption>
+        <thead>
+            <tr>
+                <th scope="col">
+                    <input type="checkbox" />
+                </th>
+                <th scope="col">
+                    Code
+                </th>
+                <th scope="col">
+                    Name
+                </th>
+                <th scope="col">
+                    Color
+                </th>
+                <th scope="col">
+                    Actions
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <input type="checkbox" aria-label="Seleziona la riga" />
+                </td>
+                <td>0001</td>
+                <td>Sabrina Hoover</td>
+                <td>red</td>
+                <!-- 
+      <td> 
+        <button><i class="far fa-edit"></i></button> 
+        <button>delete</button> 
+        <button>options</button> 
+      </td>-->
+                <td>
+                    <button class="icon-button" title="Modifica"
+                        aria-label="Modifica la riga"><i class="fa fa-edit"
+                            aria-hidden="true"></i></button>
+                    <button class="icon-button" title="Elimina"
+                        aria-label="Elimina la riga"><i class="fa fa-trash"
+                            aria-hidden="true"></i></button>
+                    <button class="icon-button" title="Azioni"
+                        aria-label="Altre azioni sulla riga"><i
+                            class="fa fa-ellipsis-h"
+                            aria-hidden="true"></i></button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
