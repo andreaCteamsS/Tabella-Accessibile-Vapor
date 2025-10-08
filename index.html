@@ -50,12 +50,6 @@
                 <td>0001</td>
                 <td>Sabrina Hoover</td>
                 <td>red</td>
-                <!-- 
-      <td> 
-        <button><i class="far fa-edit"></i></button> 
-        <button>delete</button> 
-        <button>options</button> 
-      </td>-->
                 <td>
                     <button class="icon-button" title="Modifica"
                         aria-label="Modifica la riga"><i class="fa fa-edit"
@@ -64,13 +58,28 @@
                         aria-label="Elimina la riga"><i class="fa fa-trash"
                             aria-hidden="true"></i></button>
                     <button class="icon-button" title="Azioni"
-                        aria-label="Altre azioni sulla riga"><i
-                            class="fa fa-ellipsis-h"
-                            aria-hidden="true"></i></button>
+                        aria-label="Altre azioni sulla riga"
+                        onclick="openDialog('dialog1')"><i
+                            class="fa fa-ellipsis-h" aria-hidden="true"
+                            ></i></button>
+                    <dialog id="dialog1">
+                        <button class="icon-button" title="Modifica"
+                            aria-label="Modifica la riga"><i class="fa fa-pen"
+                                aria-hidden="true"></i></button>
+                        <button class="icon-button" title="Elimina"
+                            aria-label="Elimina la riga"><i class="fa fa-eye"
+                                aria-hidden="true"></i></button>
+                        <form method="dialog">
+                            <button class="icon-button" title="Chiudi"
+                            aria-label="Chiudi il dialog"><i class="fa fa-xmark"
+                                    aria-hidden="true"></i></button>
+                        </form>
+                    </dialog>
                 </td>
             </tr>
         </tbody>
     </table>
+    <script src="script.js"></script>
 </body>
 
 </html>
