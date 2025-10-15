@@ -1,42 +1,116 @@
 table {
+
   font-family: "Inter", sans-serif;
+
   margin: 0 auto;
+
   margin-top: 60px;
+
   width: 80%;
+
   text-align: left;
+
   font-size: 14px;
+
   border-collapse: collapse;
+  border: 1px solid black;
+
+
 }
+
+
 thead {
+
   position: sticky;
+
 }
+
+
 tbody {
+
   overflow-y: auto;
+
 }
-th ,td {
-   background-color: #ededed;
+
+th {
+
+  background-color: #ededed;
+
   padding: 8px;
+
   border-bottom: 1px solid black
 }
+
+
+td {
+
+  background-color: #ffffff;
+
+  padding: 8px;
+
+  border-bottom: 1px solid black
+}
+
+
+
 .icon-button {
+
   background: none;
+
   border: none;
+
   padding: 0;
+
   margin: 0;
+
   cursor: pointer;
-  color: inherit; /* eredita il colore del testo */
+
+  color: #4474A9;
+  /* eredita il colore del testo */
+
 }
-.icon-button:focus {
-  outline: 2px solid #000;
-  outline-offset: 3px;
-}
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
+
+.icon-button1 {
+
+  background: none;
+
+  border: none;
+
   padding: 0;
+
+  margin: 0;
+
+  cursor: pointer;
+
+  color: #f51919;
+}
+
+
+.icon-button:focus {
+
+  outline: 2px solid #000;
+
+  outline-offset: 3px;
+
+}
+
+
+.visually-hidden {
+
+  position: absolute;
+
+  width: 1px;
+
+  height: 1px;
+
+  padding: 0;
+
   margin: -1px;
+
   overflow: hidden;
+
   clip: rect(0, 0, 0, 0);
+
   border: 0;
+
 }
