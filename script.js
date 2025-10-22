@@ -1,5 +1,7 @@
 const openDialog = (id) => {
-    const dialog = document.getElementById(id);
-    dialog.setAttribute("open", "true");
-    dialog.focus();
-}
+  document.getElementById(id).show();
+};
+
+const closeDialog = (id) => {
+  document.getElementById(id).close();
+};
