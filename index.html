@@ -21,66 +21,7 @@
 </head>
 
 <body>
-    <table>
-        <caption class="visually-hidden"> Elenco utenti </caption>
-        <thead>
-            <tr>
-                <th scope="col">
-                    <input type="checkbox" />
-                </th>
-                <th scope="col">
-                    Code
-                </th>
-                <th scope="col">
-                    Name
-                </th>
-                <th scope="col">
-                    Color
-                </th>
-                <th scope="col">
-                    Actions
-                </th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>
-                    <input type="checkbox" aria-label="Seleziona la riga" />
-                </td>
-                <td>0001</td>
-                <td>Sabrina Hoover</td>
-                <td>red</td>
-                <td>
-                    <button class="icon-button" title="Modifica"
-                        aria-label="Modifica la riga"><i class="fa fa-edit"
-                            aria-hidden="true"></i></button>
-                    <button class="icon-button1" title="Elimina"
-                        aria-label="Elimina la riga"><i class="fa fa-trash"
-                            aria-hidden="true"></i></button>
-                    <button class="icon-button" title="Azioni"
-                        aria-label="Altre azioni sulla riga"
-                        onclick="openDialog('dialog1')"><i
-                            class="fa fa-ellipsis-h"
-                            aria-hidden="true"></i></button>
-                    <dialog id="dialog1">
-                        <button class="icon-button" title="Visualizza anteprima"
-                            aria-label="Visualizza anteprima"><i
-                                class="fa fa-eye"
-                                aria-hidden="true"></i></button>
-                        <button class="icon-button" title="Visualizza dettagli"
-                            aria-label="Visualizza dettagli"><i
-                                class="fa fa-info"
-                                aria-hidden="true"></i></button>
-                        <button class="icon-button" title="Chiudi"
-                        onclick="closeDialog('dialog1')"
-                            aria-label="Chiudi il dialog"><i
-                                class="fa fa-xmark"
-                                aria-hidden="true"></i></button>
-                    </dialog>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+    <table id="mainTable"></table>
     <script src="script.js"></script>
 </body>
 
