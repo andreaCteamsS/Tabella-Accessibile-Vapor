@@ -52,14 +52,35 @@ const TABLE_CONFIG = {
         {
           actionType: 'delete',
           button: {
-            className: 'icon-button1',
+            className: 'icon-button-danger',
             title: 'Elimina',
             ariaLabel: 'Elimina la riga',
             iconClass: 'fa-trash',
           },
         },
         {
+          actionType: 'preview',
+          onlyOnMobile: true,
+          button: {
+            className: 'icon-button',
+            title: 'Visualizza anteprima',
+            ariaLabel: 'Visualizza anteprima',
+            iconClass: 'fa-eye',
+          },
+        },
+        {
+          actionType: 'details',
+          onlyOnMobile: true,
+          button: {
+            className: 'icon-button',
+            title: 'Visualizza dettagli',
+            ariaLabel: 'Visualizza dettagli',
+            iconClass: 'fa-info',
+          },
+        },
+        {
           actionType: 'options',
+          onlyOnDesktop: true,
           button: {
             className: 'icon-button',
             title: 'Azioni',
@@ -186,9 +207,12 @@ function createHeaderCell(content, scope = 'col') {
   return th;
 }
 
-function createActionsCell(actions, rowId) {
+function createActionsCell(actions, rowId, mobile = false) {
   const actionsContainer = document.createElement('div');
-  actions.forEach(({ actionType, button, dialogConfig }) => {
+  actions.forEach(({ actionType, button, dialogConfig, onlyOnDesktop, onlyOnMobile }) => {
+    if ((onlyOnMobile && !mobile) || (onlyOnDesktop && mobile)) {
+      return
+    }
     if (actionType === 'options') {
       const buttonElement = createButton(button, () => openDialog(`dialog${rowId}`));
       const dialog = createDialog(dialogConfig, rowId);
@@ -252,7 +276,7 @@ function createMobileUserGroup(rowData, columns, dataIndex) {
       return;
     }
     const content =
-      columnType === 'actions' ? createActionsCell(actions, rowData.id) : rowData[propertyName];
+      columnType === 'actions' ? createActionsCell(actions, rowData.id, true) : rowData[propertyName];
     fragment.appendChild(createMobileRow(label, content, isEven));
   });
   return fragment;
